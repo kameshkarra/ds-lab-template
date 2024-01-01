@@ -28,6 +28,7 @@ jobs:
         conda activate ds-lab
         conda env list
         conda env export
+        poetry about
     - name: Install project dependencies specified in pyproject.toml
       run: |
         poetry install
