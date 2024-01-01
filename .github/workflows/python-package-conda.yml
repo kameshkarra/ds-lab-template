@@ -23,7 +23,6 @@ jobs:
         conda install --channel=conda-forge --name=base conda-lock
     - name: Create conda environment from the lockfile
       run: |
-        source $CONDA/etc/profile.d/conda.sh
         conda-lock install --name ds-lab conda-lock.yml
     - name: Activate the conda environment and install dependencies
       run: |
@@ -33,4 +32,6 @@ jobs:
         poetry run pre-commit
     - name: Test with pytest
       run: |
+        source $CONDA/etc/profile.d/conda.sh
+        conda activate ds-lab
         poetry run pytest
