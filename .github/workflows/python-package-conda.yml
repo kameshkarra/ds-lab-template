@@ -26,6 +26,7 @@ jobs:
         source $CONDA/etc/profile.d/conda.sh
         conda-lock install --name ds-lab conda-lock.yml
         conda activate ds-lab
+        conda env list
     - name: Install project dependencies specified in pyproject.toml
       run: |
         make dependencies
