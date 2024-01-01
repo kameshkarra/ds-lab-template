@@ -18,16 +18,14 @@ jobs:
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         echo $CONDA/bin >> $GITHUB_PATH
-        ls $CONDA/etc/profile.d/
     - name: Install conda-lock
       run: |
         conda install --channel=conda-forge --name=base conda-lock
-    - name: Create conda environment from the lockfile
+    - name: Create and activate conda environment from the lockfile
       run: |
+        source $CONDA/etc/profile.d/conda.sh
         conda-lock install --name ds-lab conda-lock.yml
-    - name: Activate conda environment
-      run: |
-        conda init --all && conda activate ds-lab
+        conda activate ds-lab
     - name: Install project dependencies specified in pyproject.toml
       run: |
         make dependencies
