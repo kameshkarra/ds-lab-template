@@ -774,27 +774,26 @@ pgp = ["gpg"]
 
 [[package]]
 name = "dvc"
-version = "2.46.0"
+version = "2.58.2"
 description = "Git for data scientists - manage your code and data together"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "dvc-2.46.0-py3-none-any.whl", hash = "sha256:cb7d9e8289a1f043a1d69a61a8e9fdcd4e81df254db7b9c00dd190750b9f1700"},
-    {file = "dvc-2.46.0.tar.gz", hash = "sha256:2652679d2ab6803f4f4fe091278eef4bbf79b4e2e3e58fbf713522ada7ad6e78"},
+    {file = "dvc-2.58.2-py3-none-any.whl", hash = "sha256:3a935615812fd57c341e8b58a7f4de57d9d4a067500376041c3f1c805ee24345"},
+    {file = "dvc-2.58.2.tar.gz", hash = "sha256:d40fff99b76719d1d524f103ad9dc64141bb363492abb9b8a61c6e70efe5a4dc"},
 ]
 
 [package.dependencies]
-appdirs = ">=1.4.3"
 colorama = ">=0.3.9"
 configobj = ">=5.0.6"
 distro = ">=1.3"
 dpath = ">=2.1.0,<3"
-dvc-data = ">=0.42.1,<0.43"
-dvc-http = "*"
-dvc-render = ">=0.1.2"
-dvc-studio-client = ">=0.1.1"
-dvc-task = ">=0.2.0,<1"
+dvc-data = ">=0.51.0,<0.52"
+dvc-http = ">=2.29.0"
+dvc-render = ">=0.3.1,<1"
+dvc-studio-client = ">=0.9.2,<1"
+dvc-task = ">=0.2.1,<1"
 flatten-dict = ">=0.4.1,<1"
 "flufl.lock" = ">=5"
 funcy = ">=1.14"
@@ -804,6 +803,7 @@ iterative-telemetry = ">=0.0.7"
 networkx = ">=2.5"
 packaging = ">=19"
 pathspec = ">=0.10.3"
+platformdirs = ">=3.1.1,<4"
 psutil = ">=5.8"
 pydot = ">=1.2.4"
 pygtrie = ">=2.3.2"
@@ -811,7 +811,7 @@ pyparsing = ">=2.4.7"
 requests = ">=2.22"
 rich = ">=12"
 "ruamel.yaml" = ">=0.17.11"
-scmrepo = ">=0.1.15,<1"
+scmrepo = ">=1.0.0,<2"
 shortuuid = ">=0.5"
 shtab = ">=1.3.4,<2"
 tabulate = ">=0.8.7"
@@ -822,45 +822,45 @@ voluptuous = ">=0.11.7"
 
 [package.extras]
 all = ["dvc[azure,gdrive,gs,hdfs,oss,s3,ssh,webdav,webhdfs]"]
-azure = ["dvc-azure (==2.21.1)"]
+azure = ["dvc-azure (>=2.21.2)"]
 dev = ["dvc[azure,gdrive,gs,hdfs,lint,oss,s3,ssh,terraform,tests,webdav,webhdfs]"]
-gdrive = ["dvc-gdrive (==2.19.1)"]
+gdrive = ["dvc-gdrive (==2.19.2)"]
 gs = ["dvc-gs (==2.22.0)"]
 hdfs = ["dvc-hdfs (==2.19)"]
-lint = ["mypy (==1.0.1)", "pylint (==2.16.3)", "types-appdirs", "types-colorama", "types-psutil", "types-requests", "types-tabulate", "types-toml", "types-tqdm"]
+lint = ["mypy (==1.3.0)", "pylint (==2.17.4)", "types-colorama", "types-psutil", "types-requests", "types-tabulate", "types-toml", "types-tqdm"]
 oss = ["dvc-oss (==2.19)"]
-s3 = ["dvc-s3 (==2.21)"]
-ssh = ["dvc-ssh (==2.21)"]
-ssh-gssapi = ["dvc-ssh[gssapi] (==2.21)"]
+s3 = ["dvc-s3 (==2.22.0)"]
+ssh = ["dvc-ssh (>=2.22.1,<3)"]
+ssh-gssapi = ["dvc-ssh[gssapi] (>=2.22.1,<3)"]
 terraform = ["tpi[ssh] (>=2.1)"]
-testing = ["pytest-test-utils"]
-tests = ["beautifulsoup4 (>=4.4)", "dvc-ssh", "filelock", "flaky", "pytest (>=7,<8)", "pytest-cov", "pytest-docker (>=1,<2)", "pytest-lazy-fixture", "pytest-mock", "pytest-test-utils", "pytest-timeout (>=2)", "pytest-xdist (>=3.2)", "pywin32 (>=225)"]
+testing = ["pytest-benchmark[histogram]", "pytest-test-utils", "pytest-virtualenv"]
+tests = ["beautifulsoup4 (>=4.4)", "dvc-ssh", "dvc[testing]", "filelock", "flaky", "pytest (>=7,<8)", "pytest-cov", "pytest-docker (>=1,<2)", "pytest-lazy-fixture", "pytest-mock", "pytest-test-utils", "pytest-timeout (>=2)", "pytest-xdist (>=3.2)", "pywin32 (>=225)"]
 webdav = ["dvc-webdav (==2.19.1)"]
 webhdfs = ["dvc-webhdfs (==2.19)"]
 webhdfs-kerberos = ["dvc-webhdfs[kerberos] (==2.19)"]
 
 [[package]]
 name = "dvc-data"
-version = "0.42.3"
+version = "0.51.0"
 description = "dvc data"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "dvc-data-0.42.3.tar.gz", hash = "sha256:0e02ce462baa3bfe5c0cd5ae27a6ad0215a3654c3f61332d739747105f7b7508"},
-    {file = "dvc_data-0.42.3-py3-none-any.whl", hash = "sha256:ce2c9d06ca8f9d922f4035d0a43801e5d4a21ffcc4faac7ffb51cb4d57f4fd2f"},
+    {file = "dvc-data-0.51.0.tar.gz", hash = "sha256:32544bb7d3ae509f91c2d07a9dc3739dd87980be5b41582781efb4f246b58497"},
+    {file = "dvc_data-0.51.0-py3-none-any.whl", hash = "sha256:f3244f7d848f10fdb21d5ff485410f6955a1de828a149577633e3ed0f451ebd2"},
 ]
 
 [package.dependencies]
 attrs = ">=21.3.0"
 dictdiffer = ">=0.8.1"
 diskcache = ">=5.2.1"
-dvc-objects = ">=0.21.1,<1"
+dvc-objects = ">=0.22.0,<1"
 funcy = ">=1.14"
 nanotime = ">=0.5.2"
 pygtrie = ">=2.3.2"
 shortuuid = ">=0.5.0"
-sqltrie = ">=0.2.0,<1"
+sqltrie = ">=0.3.1,<1"
 
 [package.extras]
 all = ["rich (>=10.11.0,<14.0.0)", "typer[all] (>=0.6)"]
@@ -913,14 +913,14 @@ tests = ["mypy (==0.971)", "pylint (==2.15.0)", "pytest (==7.2.0)", "pytest-cov 
 
 [[package]]
 name = "dvc-render"
-version = "1.0.0"
+version = "0.7.0"
 description = "DVC render"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "dvc-render-1.0.0.tar.gz", hash = "sha256:64be22457a92d7c7983de89cb5c4da2d27e289d10f4ee5d4c51ba885ad1c7762"},
-    {file = "dvc_render-1.0.0-py3-none-any.whl", hash = "sha256:08ffd17c1de07fce3440a7082c18f1d7f9dc156e44b42f982f28938fb27b1376"},
+    {file = "dvc-render-0.7.0.tar.gz", hash = "sha256:8f0fc1a2924249152f2c5259af41821a1e9c9004d2197f3057e5f9f73d761d43"},
+    {file = "dvc_render-0.7.0-py3-none-any.whl", hash = "sha256:ee5c2475baf80a163fe6726796535a9aea7ea1389dad9936f3df9211c2f45ece"},
 ]
 
 [package.extras]
@@ -1715,14 +1715,14 @@ markdown = ">=3.0"
 
 [[package]]
 name = "platformdirs"
-version = "4.1.0"
+version = "3.11.0"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-category = "dev"
+category = "main"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.7"
 files = [
-    {file = "platformdirs-4.1.0-py3-none-any.whl", hash = "sha256:11c8f37bcca40db96d8144522d925583bdb7a31f7b0e37e3ed4318400a8e2380"},
-    {file = "platformdirs-4.1.0.tar.gz", hash = "sha256:906d548203468492d432bcb294d4bc2fff751bf84971fbb2c10918cc206ee420"},
+    {file = "platformdirs-3.11.0-py3-none-any.whl", hash = "sha256:e9d171d00af68be50e9202731309c4e658fd8bc76f55c11c7dd760d023bda68e"},
+    {file = "platformdirs-3.11.0.tar.gz", hash = "sha256:cf8ee52a3afdb965072dcc652433e0c7e3e40cf5ea1477cd4b3b1d2eb75495b3"},
 ]
 
 [package.extras]
@@ -2165,30 +2165,30 @@ files = [
 
 [[package]]
 name = "scmrepo"
-version = "0.2.1"
+version = "1.4.1"
 description = "SCM wrapper and fsspec filesystem for Git for use in DVC"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "scmrepo-0.2.1-py3-none-any.whl", hash = "sha256:5d885f23649c416c8251f9cd5cd3bb4d85dcd737e4471dfec1050ce99f9957eb"},
-    {file = "scmrepo-0.2.1.tar.gz", hash = "sha256:99d1f7aa30ec4d895c21f7662b457fdedeba185af1bbc1b1008beff8da9a57bc"},
+    {file = "scmrepo-1.4.1-py3-none-any.whl", hash = "sha256:025844fc27d2cc4b5056d3a89bcfdce361525ccf7a88bf52c05fba8a27372465"},
+    {file = "scmrepo-1.4.1.tar.gz", hash = "sha256:a5b2c0fa35e529e036ce362edc7493f0d196af23412d85485ded7518ea7afb6b"},
 ]
 
 [package.dependencies]
 asyncssh = ">=2.13.1,<3"
-dulwich = ">=0.20.49"
+dulwich = ">=0.21.6"
 fsspec = ">=2021.7.0"
 funcy = ">=1.14"
 gitpython = ">3"
 pathspec = ">=0.9.0"
-pygit2 = ">=1.10.0"
+pygit2 = ">=1.13.0"
 pygtrie = ">=2.3.2"
 shortuuid = ">=0.5.0"
 
 [package.extras]
-dev = ["mock (==5.0.1)", "mypy (==0.971)", "paramiko (==3.1.0)", "pylint (==2.15.0)", "pytest (==7.2.0)", "pytest-asyncio (==0.18.3)", "pytest-cov (==3.0.0)", "pytest-docker (==0.12.0)", "pytest-mock (==3.8.2)", "pytest-sugar (==0.9.5)", "pytest-test-utils (==0.0.8)", "types-certifi (==2021.10.8.3)", "types-mock (==5.0.0.6)", "types-paramiko (==3.0.0.5)"]
-tests = ["mock (==5.0.1)", "mypy (==0.971)", "paramiko (==3.1.0)", "pylint (==2.15.0)", "pytest (==7.2.0)", "pytest-asyncio (==0.18.3)", "pytest-cov (==3.0.0)", "pytest-docker (==0.12.0)", "pytest-mock (==3.8.2)", "pytest-sugar (==0.9.5)", "pytest-test-utils (==0.0.8)", "types-certifi (==2021.10.8.3)", "types-mock (==5.0.0.6)", "types-paramiko (==3.0.0.5)"]
+dev = ["mock (==5.1.0)", "mypy (==0.971)", "paramiko (==3.3.1)", "pylint (==2.15.0)", "pytest (==7.2.0)", "pytest-asyncio (==0.18.3)", "pytest-cov (==3.0.0)", "pytest-docker (==0.12.0)", "pytest-mock (==3.8.2)", "pytest-sugar (==0.9.5)", "pytest-test-utils (==0.0.8)", "types-certifi (==2021.10.8.3)", "types-mock (==5.1.0.2)", "types-paramiko (==3.3.0.0)"]
+tests = ["mock (==5.1.0)", "mypy (==0.971)", "paramiko (==3.3.1)", "pylint (==2.15.0)", "pytest (==7.2.0)", "pytest-asyncio (==0.18.3)", "pytest-cov (==3.0.0)", "pytest-docker (==0.12.0)", "pytest-mock (==3.8.2)", "pytest-sugar (==0.9.5)", "pytest-test-utils (==0.0.8)", "types-certifi (==2021.10.8.3)", "types-mock (==5.1.0.2)", "types-paramiko (==3.3.0.0)"]
 
 [[package]]
 name = "setuptools"
