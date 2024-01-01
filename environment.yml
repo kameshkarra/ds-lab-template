@@ -1,10 +1,7 @@
 name: ds-lab
 channels:
-  - conda-forge
-  # We want to have a reproducible setup, so we don't want default channels,
-  # which may be different for different users. All required channels should
-  # be listed explicitly here.
-  - nodefaults
+  - defaults
+  #TODO - replace with actual channels
 dependencies:
   - attrs=23.1.0=py311hca03da5_0
   - blas=1.0=openblas
