@@ -20,7 +20,8 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        conda env update --file environment.yml --name base
+        conda install --channel=conda-forge --name=base conda-lock
+        conda-lock install --name base conda-lock.yml
     - name: Install poetry dependencies
       run: |
         make dependencies
