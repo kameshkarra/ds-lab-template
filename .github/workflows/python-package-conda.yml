@@ -31,6 +31,7 @@ jobs:
         poetry about
     - name: Install project dependencies specified in pyproject.toml
       run: |
+        source $CONDA/etc/profile.d/conda.sh
         poetry install
         poetry run pre-commit
     - name: Test with pytest
