@@ -20,7 +20,7 @@ dependencies:
 tests:
 	@echo "Running tests..."
 	. $(CONDA)/etc/profile.d/conda.sh && \
-	conda activate $(envname) && git \
+	conda activate $(envname) && \
 	poetry run pytest
 
 docs:
