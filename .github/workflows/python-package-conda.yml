@@ -27,6 +27,7 @@ jobs:
         conda-lock install --name ds-lab conda-lock.yml
         conda activate ds-lab
         conda env list
+        conda env export
     - name: Install project dependencies specified in pyproject.toml
       run: |
         make dependencies
