@@ -17,7 +17,7 @@
 make env
 ```
 ## Dependnecy management
-Conda is used create conda environment with Python and Poetry, see environment.yml. Conda-lock is used to create lock files for multipel platforms, see conda-lock.yml. To create conda-lock.yml
+Conda is used create conda environment with Python and Poetry, see environment.yml. Conda-lock is used to create lock files for multiple platforms, see conda-lock.yml. To create conda-lock.yml
 ```bash
 make conda-lock
 ```
