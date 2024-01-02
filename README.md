@@ -7,6 +7,7 @@
 * [DVC](https://dvc.org/): Data version control - [article](https://mathdatasimplified.com/2023/02/20/introduction-to-dvc-data-version-control-tool-for-machine-learning-projects-2/)
 * [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
 * [conda-lock](https://github.com/conda/conda-lock): Lightweight library that can be used to generate fully reproducible lock files for conda environments.
+* [Renovate](https://docs.renovatebot.com): For automated dependency updates. Multi-platform and multi-language.
 
 ## Set up the environment
 
@@ -16,11 +17,10 @@
 make env
 ```
 ## Dependnecy management
-Conda is used create conda environment with Python and Poetry, see environment.yml. Conda-lock is used to create lock files for multipel platforms, see conda-lock.yml.
+Conda is used create conda environment with Python and Poetry, see environment.yml. Conda-lock is used to create lock files for multipel platforms, see conda-lock.yml. To create conda-lock.yml
 ```bash
 make conda-lock
 ```
-
 Poetry is used to manage the rest of the application dependencies.
 
 ## Install dependencies
