@@ -6,12 +6,14 @@
 * [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
 * [DVC](https://dvc.org/): Data version control - [article](https://mathdatasimplified.com/2023/02/20/introduction-to-dvc-data-version-control-tool-for-machine-learning-projects-2/)
 * [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
+* [conda-lock](https://github.com/conda/conda-lock): Lightweight library that can be used to generate fully reproducible lock files for conda environments.
 
 ## Set up the environment
-1. Install [Poetry](https://python-poetry.org/docs/#installation)
+
+1. Install [anaconda](https://www.anaconda.com/download)
 2. Set up the environment:
 ```bash
-make env 
+make env
 ```
 
 ## Install dependencies
@@ -41,7 +43,7 @@ git commit -m "add data"
 
 To push the data to remote storage, type:
 ```bash
-dvc push 
+dvc push
 ```
 
 ## Auto-generate API documentation

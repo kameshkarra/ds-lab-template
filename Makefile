@@ -1,13 +1,13 @@
 .DEFAULT_GOAL : build
-.PHONY: tests docs build clean
+.PHONY: env tests docs build clean
 
 envname = ds-lab
 pythonversion = 3.11.5
 CONDA ?= $(CONDA_PREFIX)
 
-build: dependencies tests
+build: install tests
 
-dependencies:
+env:
 	conda create --name=$(envname) python=$(pythonversion)
 	. $(CONDA)/etc/profile.d/conda.sh && \
 	conda activate $(envname) && \
