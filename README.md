@@ -15,6 +15,13 @@
 ```bash
 make env
 ```
+## Dependnecy management
+Conda is used create conda environment with Python and Poetry, see environment.yml. Conda-lock is used to create lock files for multipel platforms, see conda-lock.yml.
+```bash
+make conda-lock
+```
+
+Poetry is used to manage the rest of the application dependencies.
 
 ## Install dependencies
 To install all dependencies for this project, run:

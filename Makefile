@@ -31,3 +31,8 @@ docs:
 
 clean:
 	conda remove --name $(envname) --all
+
+conda-lock:
+	. $(CONDA)/etc/profile.d/conda.sh && \
+	conda activate $(envname) && \
+	conda-lock -f environment.yml
