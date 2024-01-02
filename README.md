@@ -6,7 +6,7 @@
 * [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
 * [DVC](https://dvc.org/): Data version control - [article](https://mathdatasimplified.com/2023/02/20/introduction-to-dvc-data-version-control-tool-for-machine-learning-projects-2/)
 * [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
-* [conda-lock](https://github.com/conda/conda-lock): Lightweight library that can be used to generate fully reproducible lock files for conda environments.
+* [conda-lock](https://github.com/conda/conda-lock): Lightweight library that can be used to generate fully reproducible lock files for conda environments. [article](https://pythonspeed.com/articles/conda-dependency-management/)
 * [Renovate](https://docs.renovatebot.com): For automated dependency updates. Multi-platform and multi-language.
 
 ## Set up the environment
