@@ -1,7 +1,7 @@
 .DEFAULT_GOAL : build
 .PHONY: env tests docs build clean
 
-envname = ds-lab
+envname = ds-lab-template
 pythonversion = 3.11.5
 CONDA ?= $(CONDA_PREFIX)
 

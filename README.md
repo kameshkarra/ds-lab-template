@@ -1,4 +1,4 @@
-# ds-lab
+# ds-lab-template
 
 ## Tools used in this project
 * [Conda]() for environemnt and dependency management of base conda environment and platform dependent dependencies.
