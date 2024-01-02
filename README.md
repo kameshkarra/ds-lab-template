@@ -9,6 +9,7 @@
 * [conda-lock](https://github.com/conda/conda-lock): Lightweight library that can be used to generate fully reproducible lock files for conda environments. [article](https://pythonspeed.com/articles/conda-dependency-management/)
 * [Renovate](https://docs.renovatebot.com): For automated dependency updates. Multi-platform and multi-language.
 * GitHub Action Workflows: For continous integration. See [python-package-conda.yml](.github/workflows/python-package-conda.yml)
+* Make: To automate conda environment creation and installation of Poetry. See [Makefile](Makefile)
 
 ## Set up the environment
 
