@@ -8,13 +8,11 @@ CONDA ?= $(CONDA_PREFIX)
 build: install tests
 
 env:
-	conda create --name=$(envname) python=$(pythonversion)
-	. $(CONDA)/etc/profile.d/conda.sh && \
-	conda activate $(envname) && \
-	conda install --channel=conda-forge --name $(envname) conda-lock &&\
+	conda create --name=$(envname) python=$(pythonversion) conda-lock
+	. $(CONDA)/etc/profile.d/conda.sh && conda activate $(envname) && \
 	conda-lock install --name $(envname) conda-lock.yml &&\
-	poetry lock && \
-	poetry install &&\
+	poetry lock && poetry install && \
+	pre-commit install --install-hooks -t post-checkout -t post-merge && \
 	poetry run pre-commit
 
 tests:
